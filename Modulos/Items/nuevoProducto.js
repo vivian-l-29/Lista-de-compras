@@ -1,24 +1,24 @@
-// Modulos/item/nuevoProducto.js
 export function nuevoProducto(nombre, precio, onEliminar) {
-    let item = document.createElement("div");
-    item.className = "item";
+    let producto = document.createElement("div");
+    producto.className = "item";
 
-    let spanNombre = document.createElement("span");
-    spanNombre.textContent = nombre;
+    let nombreElemento = document.createElement("span");
+    nombreElemento.textContent = nombre;
 
-    let spanPrecio = document.createElement("span");
-    spanPrecio.textContent = `Q ${precio.toFixed(2)}`;
+    let precioElemento = document.createElement("span");
+    precioElemento.textContent = "Q " + precio;
 
-    let btnEliminar = document.createElement("button");
-    btnEliminar.textContent = "❌";
-    btnEliminar.addEventListener("click", () => {
-        item.remove();
-        onEliminar(precio);
+    let botonEliminar = document.createElement("button");
+    botonEliminar.textContent = "❌";
+
+    botonEliminar.addEventListener("click", function() {
+        producto.remove();
+        Eliminar(precio);
     });
 
-    item.appendChild(spanNombre);
-    item.appendChild(spanPrecio);
-    item.appendChild(btnEliminar);
+    producto.appendChild(nombreElemento);
+    producto.appendChild(precioElemento);
+    producto.appendChild(botonEliminar);
 
-    return item;
+    return producto;
 }

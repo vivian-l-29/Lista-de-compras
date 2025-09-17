@@ -2,7 +2,7 @@
 import { agregarCarrito } from "../../database/agregarcarrito.js";
 
 export function buscarProducto() {
-    const seccion = document.createElement("div");
+    let seccion = document.createElement("div");
 
     let inputNombre = document.createElement("input");
     inputNombre.type = "text";
@@ -20,15 +20,13 @@ export function buscarProducto() {
     boton.id = "btnCarrito";
 
     boton.addEventListener("click", () => {
-        const nombre = inputNombre.value;
-        const precio = parseFloat(inputPrecio.value);
+        let nombre = inputNombre.value;
+        let precio = inputPrecio.value * 1;
 
-        if (nombre && !isNaN(precio)) {
+        if (nombre !== "" && precio === precio) { 
             agregarCarrito(nombre, precio);
             inputNombre.value = "";
             inputPrecio.value = "";
-        } else {
-            alert("Ingrese un producto y un precio válido");
         }
     });
 

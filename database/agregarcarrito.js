@@ -4,18 +4,18 @@ import { nuevoProducto } from "../Modulos/Items/nuevoProducto.js";
 let total = 0;
 
 export function agregarCarrito(nombre, precio) {
-    const lista = document.getElementById("lista");
-    const totalDiv = document.getElementById("total");
+    let lista = document.getElementById("lista");
+    let totalDiv = document.getElementById("total");
 
-    const onEliminar = (precioEliminar) => {
-        total -= precioEliminar;
+    let onEliminar = function(precioEliminar) {
+        total = total - precioEliminar;
         if (total < 0) total = 0;
-        totalDiv.textContent = `Q ${total.toFixed(2)}`;
+        totalDiv.textContent = "Q " + total;
     };
 
     let item = nuevoProducto(nombre, precio, onEliminar);
     lista.appendChild(item);
 
-    total += precio;
-    totalDiv.textContent = `Q ${total.toFixed(2)}`;
+    total = total + precio;
+    totalDiv.textContent = "Q " + total;
 }

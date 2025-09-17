@@ -1,7 +1,14 @@
-.totalDiv{
-    color: green;
+.header {
+  width: 100%;
+  background: green;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  border-radius: 0 0 12px 12px;
 }
 
-.lista{
-    color: gray;
+.titulo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
 }
