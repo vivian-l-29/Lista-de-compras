@@ -1,0 +1,1 @@
+const CARRITO = 'carrito'

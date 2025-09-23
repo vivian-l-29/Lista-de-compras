@@ -12,3 +12,14 @@ html{
 .ocultar{
     display: none;
 }
+
+#btnDescargar {
+    position: fixed;   /* 👈 hace que quede fijo en pantalla */
+    top: 10px;         /* distancia desde arriba */
+    right: 10px;       /* distancia desde la derecha */
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    z-index: 999;      /* para que quede por encima de otros elementos */
+  }
+  

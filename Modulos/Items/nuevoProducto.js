@@ -11,6 +11,9 @@ export function nuevoProducto(nombre, precio, onEliminar) {
     let botonEliminar = document.createElement("button");
     botonEliminar.textContent = "❌";
 
+    let botonDescargar = document.createElement("button");
+    botonDescargar.textContent = ""
+
     botonEliminar.addEventListener("click", function() {
         producto.remove();
         Eliminar(precio);
