@@ -1,4 +1,3 @@
-// database/agregarcarrito.js
 import { nuevoProducto } from "../Modulos/Items/nuevoProducto.js";
 
 let total = 0;

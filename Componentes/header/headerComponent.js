@@ -1,6 +1,7 @@
 function header() {
     let header = document.createElement('header');
     header.className = 'header';
+    header.id = 'miHeader'; 
 
     let titulo = document.createElement('p');
     titulo.className = 'titulo';
@@ -8,6 +9,9 @@ function header() {
 
     header.appendChild(titulo);
     return header;
+
+
     
 }
-export {header}
+
+export { header }

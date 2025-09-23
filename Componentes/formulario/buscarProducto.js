@@ -1,4 +1,3 @@
-// Componentes/formulario/buscarProducto.js
 import { agregarCarrito } from "../../database/agregarcarrito.js";
 
 export function buscarProducto() {
@@ -21,9 +20,9 @@ export function buscarProducto() {
 
     boton.addEventListener("click", () => {
         let nombre = inputNombre.value;
-        let precio = inputPrecio.value * 1;
+        let precio = parseFloat(inputPrecio.value);
 
-        if (nombre !== "" && precio === precio) { 
+        if (nombre !== "" && !isNaN(precio)) { 
             agregarCarrito(nombre, precio);
             inputNombre.value = "";
             inputPrecio.value = "";

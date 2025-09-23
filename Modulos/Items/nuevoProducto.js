@@ -6,17 +6,17 @@ export function nuevoProducto(nombre, precio, onEliminar) {
     nombreElemento.textContent = nombre;
 
     let precioElemento = document.createElement("span");
-    precioElemento.textContent = "Q " + precio;
+    precioElemento.className = "precio";
+    precioElemento.textContent = "Q " + precio.toFixed(2);
 
     let botonEliminar = document.createElement("button");
     botonEliminar.textContent = "❌";
 
-    let botonDescargar = document.createElement("button");
-    botonDescargar.textContent = ""
-
     botonEliminar.addEventListener("click", function() {
         producto.remove();
-        Eliminar(precio);
+        if (typeof onEliminar === "function") {
+            onEliminar(precio);
+        }
     });
 
     producto.appendChild(nombreElemento);

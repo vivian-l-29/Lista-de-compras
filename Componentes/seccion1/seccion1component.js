@@ -1,6 +1,6 @@
-// Componentes/seccion1/seccion1component.js
 export function seccion1() {
     let seccion = document.createElement("section");
+    seccion.id = "miSeccion1";
 
     let totalDiv = document.createElement("div");
     totalDiv.id = "total";
